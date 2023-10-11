@@ -19,7 +19,7 @@ function teste1(){
         }
     }   
     if (validadorStatus == "ok"){
-        if ((email.value.length <5) && (email.value = "")){
+        if ((email.value.length <5) && (email.value.indexOf("@") != -1)){
             alert("Preencha o email corretamente para proceguir!")
             validadorStatus = "false"
         }
