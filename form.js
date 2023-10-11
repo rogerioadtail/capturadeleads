@@ -6,33 +6,53 @@ function teste1(){
     const menssagem = document.getElementById("msgID")
     const checkBoxTerm = document.getElementById('termosID')
     var validadorStatus = "ok"
+    var tempMail = email.value
+    var regexMail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+/**RESET error COLLOR */
+    telefone.style.border = '';
+    nome.style.border = '';
+    empresa.style.border = '';
+/** */
 
-/* VALIDANDO CAMPOS EM BRANCO*/
+/* VALIDANDO EMAIL REGEX*/
+    if(regexMail.test(tempMail)){
+        email.style.border = '';
+    }
+    else{
+        tempMail="404"
+    }
+/** */
+
+/* VALIDANDO CAMPOS*/
     if (nome.value.length <3){
         alert("Preencha o nome corretamente para proceguir!")
+        nome.style.border = '2px solid #e63636';
         validadorStatus = "false"
     }
     if (validadorStatus == "ok"){
         if (telefone.value.length <8){
             alert("Preencha o telefone corretamente para proceguir!")
+            telefone.style.border = '2px solid #e63636';
             validadorStatus = "false"
         }
     }   
     if (validadorStatus == "ok"){
-        if ((email.value.length <5) && (email.value.indexOf("@") == -1)){
-            alert("Preencha o email corretamente para proceguir!")
+        if ((tempMail.length <5) || (tempMail.indexOf("@") == -1)){
+            alert("Preencha com um email válido para proceguir!")
+            email.style.border = '2px solid #e63636';
             validadorStatus = "false"
         }
     }
     if (validadorStatus == "ok"){
         if (empresa.value.length <3){
             alert("Preencha o nome da empresa corretamente para proceguir!")
+            empresa.style.border = '2px solid #e63636';
             validadorStatus = "false"
         }
     }
     if (validadorStatus == "ok"){
        if (checkBoxTerm.checked != true){ 
-        alert("Aceite os termos de serviço para proceguir!"+nome.length)
+        alert("Aceite os termos de serviço para proceguir!")
         validadorStatus = "false"
         }  
     }
