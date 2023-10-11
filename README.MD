@@ -5,7 +5,7 @@ Com isso foi desenvolvido um código unico e personalisavel para atender todas a
 A fim de compartilhar informações entre desenvolvedor e UX esse repositório foi criado.
 
 ## Instalação
-
+Será necessário apenas um editor de código fonte de sua escolha
 Aqui estão todos os itens necessário pra a execução entre eles os obrigatórios para a uma exportação 
 form.js - Nele está a captura e tratamento dos dados
 File.Server.js - Serve pra grardar itens como arquivo
